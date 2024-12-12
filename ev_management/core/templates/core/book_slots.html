@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Slot - {{ center.name }}</title>
+    <link rel="stylesheet" href="{% static 'core/css/book_slot.css' %}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Book a Slot at {{ center.name }}</h1>
+        </header>
+        <section>
+            <p><strong>Location:</strong> {{ center.location }}</p>
+            <p><strong>Contact:</strong> {{ center.contact_info }}</p>
+            <form method="post">
+                {% csrf_token %}
+                <label for="slot">Select Slot:</label>
+                <input type="datetime-local" id="slot" name="slot" required>
+                <button type="submit">Book Slot</button>
+            </form>
+        </section>
+    </div>
+</body>
+</html>

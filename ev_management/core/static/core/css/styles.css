@@ -1,0 +1,56 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Card Styling */
+.card {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card-header {
+    border-bottom: 3px solid #fff;
+}
+
+/* Input Field Styling */
+.form-label {
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Button Styling */
+.btn {
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Error Styling */
+.text-danger {
+    font-size: 0.875rem;
+}

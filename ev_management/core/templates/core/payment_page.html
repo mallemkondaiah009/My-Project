@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="{% static 'core/css/payment_page.css' %}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Payment for Booking</h1>
+        </header>
+        <section>
+            <p><strong>Booking ID:</strong> {{ booking.id }}</p>
+            <p><strong>Center:</strong> {{ booking.center.name }}</p>
+            <p><strong>Slot:</strong> {{ booking.slot }}</p>
+            <p><strong>Amount:</strong> $500</p>
+            <form method="post">
+                {% csrf_token %}
+                <button type="submit">Proceed to Payment</button>
+            </form>
+        </section>
+    </div>
+</body>
+</html>
